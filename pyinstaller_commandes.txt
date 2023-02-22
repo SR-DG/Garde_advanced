@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon=asstes\images\guard.ico --add-data="asstes\images\*.png;asstes\images" --add-data="asstes\images\*.ico;asstes\images" --add-data="user_interfaces\*.ui;ui" main.py
