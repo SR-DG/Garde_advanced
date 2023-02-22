@@ -91,6 +91,7 @@ class Auto_plus(QtWidgets.QDialog):
 
         self.setWindowTitle("auto garde")
         self.type = self.findChild(QtWidgets.QComboBox, "comboBox_2")
+        self.type_garde = self.findChild(QtWidgets.QComboBox, "comboBox_3")
         self.agent = self.findChild(QtWidgets.QComboBox, "comboBox")
         self.add_agent = self.findChild(QtWidgets.QPushButton, "pushButton")
         self.empty_list_agents = self.findChild(QtWidgets.QPushButton, "pushButton_3")

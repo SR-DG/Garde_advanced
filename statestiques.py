@@ -220,7 +220,6 @@ class RadioStatistiquesUi(QtWidgets.QMainWindow):
             self.dialog.progress.setValue(progress)
         elif type(progress) == bool:
             self.dialog.progress.setValue(100)
-            self.dialog.label.setText("complete")
             self.dialog.close()
             t1 = 0
             t2 = 0
@@ -236,6 +235,5 @@ class RadioStatistiquesUi(QtWidgets.QMainWindow):
                     self.table.setItem(row, 0, QTableWidgetItem(str(t2)))
                     self.table.setItem(row, 0, QTableWidgetItem(str(t3)))
                     self.table.setItem(row, 0, QTableWidgetItem(str(t1 + t2 + t3)))
-
 
             self.alert_("data saved")

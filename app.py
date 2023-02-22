@@ -294,7 +294,6 @@ class AppUi(QtWidgets.QMainWindow):
 
             self.thr = ThreadDeleteWorker(int(self.table_workers.item(row_selected, 0).text()))
             self.thr._signal.connect(self.signal_delete_worker)
-            self.thr._signal_list.connect(self.signal_delete_worker)
             self.thr._signal_result.connect(self.signal_delete_worker)
             self.thr.start()
 
@@ -448,7 +447,6 @@ class AppUi(QtWidgets.QMainWindow):
 
             self.thr = ThreadDeleteGardeMonth(int(self.table_gardes.item(row_selected, 0).text()))
             self.thr._signal.connect(self.signal_delete_garde_month)
-            self.thr._signal_list.connect(self.signal_delete_garde_month)
             self.thr._signal_result.connect(self.signal_delete_garde_month)
             self.thr.start()
 
