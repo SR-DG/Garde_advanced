@@ -491,6 +491,7 @@ class GuardUi(QtWidgets.QMainWindow):
 
 
             if dialog.list_jour_fr.count() != 0:
+
                 for i in range(dialog.list_jour_fr.count()):
                     jf.append(dialog.list_jour_fr.item(i).text())
 
@@ -520,21 +521,25 @@ class GuardUi(QtWidgets.QMainWindow):
                                         index = 0
                                     else:
                                         index = index + 1
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                                 else:
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                             else:
                                 index = 0
                                 if self.table.cellWidget(row, 2).chose.isEnabled():
                                     self.table.cellWidget(row, 2).chose.setCurrentText(list_med[index])
                                     index = index + 1
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                                 else:
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
 
                     else:
                         st = int(dialog.start_day.text())
@@ -550,21 +555,25 @@ class GuardUi(QtWidgets.QMainWindow):
                                         index = 0
                                     else:
                                         index = index + 1
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                                 else:
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                             else:
                                 index = 0
                                 if self.table.cellWidget(row, 2).chose.isEnabled():
                                     self.table.cellWidget(row, 2).chose.setCurrentText(list_med[index])
                                     index = index + 1
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
                                 else:
-                                    self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
-                                    index = index + 1
+                                    if self.table.cellWidget(row, 3).chose.isEnabled():
+                                        self.table.cellWidget(row, 3).chose.setCurrentText(list_med[index])
+                                        index = index + 1
             else:
                 index = 0
                 A = list_med
@@ -612,6 +621,9 @@ class GuardUi(QtWidgets.QMainWindow):
                             self.table.cellWidget(row, 2).chose.setCurrentText(A[index])
                             self.table.cellWidget(row, 3).chose.setCurrentText(B[index])
                             index = index + 1
+
+
+           
 
 
 
